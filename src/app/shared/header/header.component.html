@@ -3,9 +3,16 @@
     <img src="assets/images/logo.png" alt="App logo" class="logo">
     <h1>ANDRE VOOS</h1>
     <span class="spacer"></span>
+
+    <mat-slide-toggle (change)="toggleDarkTheme()">
+      <mat-icon *ngIf="isDarkTheme">dark_mode</mat-icon>
+      <mat-icon *ngIf="!isDarkTheme" class="light-mode-icon">light_mode</mat-icon>
+    </mat-slide-toggle>
+
     <button mat-button>COMPRE PASSAGENS</button>
     <button mat-button>CONSULTE VOOS</button>
     <button mat-raised-button color="accent">CADASTRE-SE</button>
     <button mat-stroked-button>LOGIN</button>
+
   </mat-toolbar>
 </header>

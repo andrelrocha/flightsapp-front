@@ -1,4 +1,5 @@
 @import 'styles/themes';
+@import 'styles/colors';
 
 @include mat-core();
 
@@ -9,10 +10,14 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $black-color;
+  background-color: $white-color;
 }
 
 @include angular-material-theme($light-theme);
 
 .dark-theme {
   @include angular-material-theme($dark-theme);
+
+  background-color: $grey-color;
 }

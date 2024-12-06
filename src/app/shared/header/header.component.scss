@@ -1,6 +1,9 @@
 @import 'src/styles/colors.scss';
 
 .header-container {
+  display: flex;
+  align-items: center;
+
   button {
     margin: 0 0.5rem;
     color: $white-color;
@@ -26,4 +29,9 @@
   .mat-mdc-outlined-button:not(:disabled) {
     border-color: $white-color;
   }
+
+  .light-mode-icon {
+    color: $white-color;
+  }
 }
+
