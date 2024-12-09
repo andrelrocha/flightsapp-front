@@ -1,7 +1,7 @@
-<div class="banner-container" [ngClass]="{ 'dark-mode': isDarkMode }">
+<div class="banner-container" [ngClass]="{ 'dark-mode': isDarkMode() }">
   <img
     class="banner"
-    [src]="isDarkMode ? 'assets/images/banner-dark-mode.png' : 'assets/images/banner-light-mode.png'"
+    [src]="isDarkMode() ? 'assets/images/banner-dark-mode.png' : 'assets/images/banner-light-mode.png'"
     alt="Banner da aplicação"
   />
 </div>
