@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-
+  isDarkMode: boolean = true;
 }
