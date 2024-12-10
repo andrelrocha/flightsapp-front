@@ -24,6 +24,7 @@
   .mat-toolbar {
     color: $white-color;
     padding: 0 6rem;
+    justify-content: center;
   }
 
   .mat-mdc-outlined-button:not(:disabled) {
@@ -31,6 +32,10 @@
   }
 
   .light-mode-icon {
+    color: $white-color;
+  }
+
+  .mat-icon-button {
     color: $white-color;
   }
 }

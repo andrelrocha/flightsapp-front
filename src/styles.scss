@@ -12,6 +12,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: $black-color;
   background-color: $white-color;
+  max-width: 100%;
 }
 
 @include angular-material-theme($light-theme);
@@ -20,4 +21,9 @@ body {
   @include angular-material-theme($dark-theme);
 
   background-color: $grey-color;
+}
+
+.mobile {
+  display: flex;
+  justify-self: center;
 }

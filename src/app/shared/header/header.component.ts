@@ -13,4 +13,7 @@ export class HeaderComponent {
     document.body.classList.toggle('dark-theme');
   }
 
+  isMobile(): boolean {
+    return document.body.classList.contains('mobile');
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flightsapp-front';
+
+  ngOnInit() {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      document.body.classList.add('mobile');
+    }
+  }
 }

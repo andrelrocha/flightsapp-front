@@ -13,6 +13,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './shared/card/card.component';
 import { BannerComponent } from './shared/banner/banner.component';
+import { ContainerComponent } from './shared/container/container.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BannerComponent } from './shared/banner/banner.component';
     HeaderComponent,
     FooterComponent,
     CardComponent,
-    BannerComponent
+    BannerComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
