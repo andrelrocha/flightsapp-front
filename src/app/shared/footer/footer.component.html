@@ -1,1 +1,36 @@
-<p>footer works!</p>
+<footer>
+  <mat-toolbar color="primary" class="footer-container">
+    <ng-container *ngIf="!isMobile(); else mobileMenu">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>SOBRE</h3>
+          <p class="copyright-text">&copy;
+            2024, Andre Voos - Feito por André Rocha
+          </p>
+        </div>
+        <div class="footer-column contato">
+          <h3>CONTATO</h3>
+          <div class="line">
+            <mat-icon>phone</mat-icon>
+            <p>(11) 4002-8922</p>
+          </div>
+          <div class="line">
+            <mat-icon>email</mat-icon>
+            <a href="mailto:andre.wanderley&#64;techne.com.br">andre.wanderley&#64;techne.com.br</a>
+          </div>
+          <div class="line">
+            <small>&copy; Angular &copy; Springboot</small>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+      <ng-template #mobileMenu>
+        <p class="copyright-text-mobile">&copy;
+          2024. Andre Voos
+        </p>
+        <br>
+        <small>&copy; Angular &copy; Springboot </small>
+      </ng-template>
+  </mat-toolbar>
+</footer>

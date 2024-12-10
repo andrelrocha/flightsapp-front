@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  isMobile(): boolean {
+    return document.body.classList.contains('mobile');
+  }
 }

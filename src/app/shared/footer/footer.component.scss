@@ -1,0 +1,59 @@
+@import 'src/styles/colors.scss';
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 3rem;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+
+  color: $white-color;
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .copyright-text {
+      font-size: 1.1rem;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+
+      mat-icon {
+        font-size: 1.5rem;
+        color: $white-color;
+      }
+
+      p, a, small {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      small {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+}
