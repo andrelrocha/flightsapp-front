@@ -1,14 +1,3 @@
-<div class="banner-container" [ngClass]="{ 'dark-mode': isDarkMode() }">
-  <img
-    class="banner"
-    [src]="isDarkMode() ? 'assets/images/banner-dark-mode.png' : 'assets/images/banner-light-mode.png'"
-    alt="Banner da aplicação"
-  />
-
-  <!--
-  <div *ngIf="isMobile()" class="mobile-banner">
-    <h1>ANDRE VOOS</h1>
-    <p>Descubra seu próximo sonho</p>
-  </div>
-  -->
-</div>
+<figure class="banner-container" [ngClass]="{ 'dark-mode': isDarkMode() }">
+  <img class="banner" [src]="src" [alt]="alt" />
+</figure>

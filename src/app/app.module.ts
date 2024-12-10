@@ -14,6 +14,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './shared/card/card.component';
 import { BannerComponent } from './shared/banner/banner.component';
 import { ContainerComponent } from './shared/container/container.component';
+import { ContentContainerComponent } from './shared/content-container/content-container.component';
+import { HomeComponent } from './views/home/home.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ContainerComponent } from './shared/container/container.component';
     FooterComponent,
     CardComponent,
     BannerComponent,
-    ContainerComponent
+    ContainerComponent,
+    ContentContainerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

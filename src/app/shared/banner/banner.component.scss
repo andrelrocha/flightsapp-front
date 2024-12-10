@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   background-color: $white-color;
+  margin: 0;
 
   &.dark-mode {
     background-color: $grey-color;
@@ -35,28 +36,5 @@
       rgba(0, 0, 0, 0) 0%,
       $grey-color 90%
     );
-  }
-
-  .mobile-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-    background-color: $blue-color;
-    color: $white-color;
-
-    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1rem;
-      font-style: italic;
-      margin: 0.5rem 0 0;
-    }
   }
 }
