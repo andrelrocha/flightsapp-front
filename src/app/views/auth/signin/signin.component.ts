@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { EmailFormControl, PasswordFormControl } from 'src/app/utils/formControl';
 import { AppErrorStateMatcher } from 'src/app/errors/error-state-matcher';
 
 
@@ -9,15 +9,9 @@ import { AppErrorStateMatcher } from 'src/app/errors/error-state-matcher';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent {
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  emailFormControl = new EmailFormControl();
 
-  passwordFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(8),
-  ]);
+  passwordFormControl = new PasswordFormControl(false);
 
   matcher = new AppErrorStateMatcher();
 }

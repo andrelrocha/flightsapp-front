@@ -10,7 +10,7 @@
         [errorStateMatcher]="matcher"
         placeholder="Ex. email@exemplo.com"
       />
-      <mat-hint>Digite seu email!</mat-hint>
+      <mat-hint>Digite seu email</mat-hint>
       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
         Por favor digite um email válido
       </mat-error>
@@ -29,6 +29,7 @@
         [errorStateMatcher]="matcher"
         placeholder="Digite sua senha"
       />
+      <mat-hint>Digite sua senha</mat-hint>
       <mat-error *ngIf="passwordFormControl.hasError('required')">
         Senha é <strong>obrigatória</strong>
       </mat-error>
