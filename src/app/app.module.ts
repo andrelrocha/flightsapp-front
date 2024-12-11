@@ -16,6 +16,7 @@ import { BannerComponent } from './shared/banner/banner.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { ContentContainerComponent } from './shared/content-container/content-container.component';
 import { HomeComponent } from './views/home/home.component';
+import { SliderComponent } from './shared/slider/slider.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HomeComponent } from './views/home/home.component';
     BannerComponent,
     ContainerComponent,
     ContentContainerComponent,
-    HomeComponent
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
