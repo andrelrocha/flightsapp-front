@@ -4,10 +4,15 @@ form {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 3rem 0;
+  padding: 4rem 0;
   gap: 2rem;
 
   .custom-input {
     width: 50%;
+  }
+
+  .custom-button {
+    width: 25%;
+    border-radius: 1rem;
   }
 }

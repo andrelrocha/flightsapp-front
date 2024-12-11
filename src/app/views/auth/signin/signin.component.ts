@@ -10,8 +10,17 @@ import { AppErrorStateMatcher } from 'src/app/errors/error-state-matcher';
 })
 export class SigninComponent {
   emailFormControl = new EmailFormControl();
-
   passwordFormControl = new PasswordFormControl(false);
-
   matcher = new AppErrorStateMatcher();
+
+  onSubmit() {
+    if (this.emailFormControl.valid && this.passwordFormControl.valid) {
+      const email = this.emailFormControl.value;
+      const password = this.passwordFormControl.value;
+      console.log('Email:', email);
+      console.log('Password:', password);
+    } else {
+      console.log('Form is invalid');
+    }
+  }
 }

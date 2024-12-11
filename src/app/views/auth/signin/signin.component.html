@@ -1,6 +1,7 @@
 <app-content-container>
   <form>
     <h1><strong>Faça Login</strong></h1>
+
     <mat-form-field class="custom-input">
       <mat-label>Email</mat-label>
       <input
@@ -38,5 +39,13 @@
       </mat-error>
     </mat-form-field>
 
+    <button
+      class="custom-button"
+      mat-raised-button
+      color="primary"
+      [disabled]="!emailFormControl.valid || !passwordFormControl.valid"
+      (click)="onSubmit()"
+      type="button"
+    > Entrar </button>
   </form>
 </app-content-container>
