@@ -38,6 +38,20 @@
       </mat-error>
     </mat-form-field>
 
+    <mat-form-field class="custom-input">
+      <mat-label>CPF</mat-label>
+      <input
+        matInput
+        [formControl]="cpfFormControl"
+        mask="000.000.000-00"
+        [errorStateMatcher]="matcher"
+        placeholder="Digite seu CPF"
+      />
+      <mat-hint>Digite seu CPF</mat-hint>
+      <mat-error *ngIf="cpfFormControl.hasError('required')">
+        CPF é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
 
     <mat-form-field class="custom-input">
       <mat-label>Senha</mat-label>
@@ -71,7 +85,6 @@
     </mat-form-field>
 
 
-    <!-- Add a button to submit the form
     <button
       class="custom-button"
       mat-raised-button
@@ -79,7 +92,6 @@
       [disabled]="!emailFormControl.valid || !passwordFormControl.valid"
       (click)="onSubmit()"
       type="button"
-    > Entrar </button>
-    -->
+    > Cadastrar </button>
   </form>
 </app-content-container>
