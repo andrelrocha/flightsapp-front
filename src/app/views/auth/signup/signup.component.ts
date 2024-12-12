@@ -16,5 +16,8 @@ export class SignupComponent {
   });
   matcher = new AppErrorStateMatcher();
 
-
+  isPasswordVisible = false;
+  togglePasswordVisibility() {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
 }

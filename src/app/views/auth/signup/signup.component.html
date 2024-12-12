@@ -42,8 +42,8 @@
     <mat-form-field class="custom-input">
       <mat-label>Senha</mat-label>
       <input
-        type="password"
         matInput
+        [type]="isPasswordVisible ? 'text' : 'password'"
         [formControl]="passwordFormControl"
         [errorStateMatcher]="matcher"
         placeholder="Digite sua senha"
@@ -58,6 +58,16 @@
       <mat-error *ngIf="passwordFormControl.hasError('pattern')">
         A senha precisa ter pelo menos uma letra maiúscula, uma letra minúscula e um número
       </mat-error>
+
+      <button
+        mat-icon-button
+        type="button"
+        (click)="togglePasswordVisibility()"
+        matSuffix
+        aria-label="Toggle password visibility"
+      >
+        <mat-icon>{{ isPasswordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
     </mat-form-field>
 
 

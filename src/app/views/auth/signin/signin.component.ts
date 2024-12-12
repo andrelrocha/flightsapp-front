@@ -22,6 +22,12 @@ export class SigninComponent {
     private cookieService: CookieService
   ) {}
 
+  isPasswordVisible = false;
+
+  togglePasswordVisibility() {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
   onSubmit() {
     (async () => {
       try {
