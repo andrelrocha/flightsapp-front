@@ -7,11 +7,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ShowAlertService {
   constructor(private snackBar: MatSnackBar) {}
 
-  /**
-   * @param message
-   * @param type
-   * @param duration
-   */
   showAlert(
     message: string,
     type: 'error' | 'success',
