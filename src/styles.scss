@@ -21,6 +21,7 @@ body {
   @include angular-material-theme($dark-theme);
 
   background-color: $grey-color;
+  color: $white-color;
 }
 
 .mobile {

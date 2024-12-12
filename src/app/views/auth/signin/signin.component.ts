@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppErrorStateMatcher, EmailFormControl, PasswordFormControl } from 'src/app/utils/formControl';
 import { ShowAlertService } from 'src/app/service/notification/showAlert';
@@ -15,7 +16,11 @@ export class SigninComponent {
   passwordFormControl = new PasswordFormControl(false);
   matcher = new AppErrorStateMatcher();
 
-  constructor(private alertService: ShowAlertService, private signInUseCase: SignInUseCase) {}
+  constructor(
+    private alertService: ShowAlertService,
+    private signInUseCase: SignInUseCase,
+    private cookieService: CookieService
+  ) {}
 
   onSubmit() {
     (async () => {
@@ -27,7 +32,7 @@ export class SigninComponent {
 
           const apiReturn = await this.signInUseCase.signIn(loginData);
 
-          console.log(apiReturn);
+          this.cookieService.set('auth', apiReturn.accessToken, 1 / 24);
 
           this.alertService.showAlert('Login realizado com sucesso!', 'success');
         } else {
