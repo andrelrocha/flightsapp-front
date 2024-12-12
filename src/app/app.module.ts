@@ -22,6 +22,7 @@ import { ContentContainerComponent } from './shared/content-container/content-co
 import { HomeComponent } from './views/home/home.component';
 import { SliderComponent } from './shared/slider/slider.component';
 import { SigninComponent } from './views/auth/signin/signin.component';
+import { SignupComponent } from './views/auth/signup/signup.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { SigninComponent } from './views/auth/signin/signin.component';
     HomeComponent,
     SliderComponent,
     SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
