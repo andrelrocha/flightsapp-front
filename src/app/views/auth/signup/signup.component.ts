@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AppErrorStateMatcher, CpfFormControl, EmailFormControl, PasswordFormControl, StringFormControl } from 'src/app/utils/formControl';
+import { BrPhoneFormControl } from 'src/app/utils/formControl/brazilian-phone';
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +16,7 @@ export class SignupComponent {
     minLength: 3
   });
   cpfFormControl = new CpfFormControl(true);
+  brazilianPhoneFormControl = new BrPhoneFormControl(true);
   matcher = new AppErrorStateMatcher();
 
   isPasswordVisible = false;
@@ -27,7 +29,8 @@ export class SignupComponent {
       email: this.emailFormControl.value,
       password: this.passwordFormControl.value,
       name: this.nameFormControl.value,
-      cpf: this.cpfFormControl.value
+      cpf: this.cpfFormControl.value,
+      phone: this.brazilianPhoneFormControl.value
     };
 
     console.log(form);

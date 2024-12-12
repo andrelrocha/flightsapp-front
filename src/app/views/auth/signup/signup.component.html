@@ -39,6 +39,21 @@
     </mat-form-field>
 
     <mat-form-field class="custom-input">
+      <mat-label>Telefone</mat-label>
+      <input
+        matInput
+        [formControl]="brazilianPhoneFormControl"
+        mask="(00) 00000-0000"
+        [errorStateMatcher]="matcher"
+        placeholder="Digite seu telefone"
+      />
+      <mat-hint>Digite seu telefone</mat-hint>
+      <mat-error *ngIf="brazilianPhoneFormControl.hasError('required')">
+        Telefone é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="custom-input">
       <mat-label>CPF</mat-label>
       <input
         matInput
