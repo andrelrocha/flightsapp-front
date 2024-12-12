@@ -1,4 +1,6 @@
 import { EmailFormControl } from './email';
 import { PasswordFormControl } from './password';
 
-export { EmailFormControl, PasswordFormControl };
+import { AppErrorStateMatcher } from './errors/error-state-matcher';
+
+export { AppErrorStateMatcher, EmailFormControl, PasswordFormControl };

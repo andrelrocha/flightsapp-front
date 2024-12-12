@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +34,7 @@ import { SigninComponent } from './views/auth/signin/signin.component';
     ContentContainerComponent,
     HomeComponent,
     SliderComponent,
-    SigninComponent
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,7 @@ import { SigninComponent } from './views/auth/signin/signin.component';
     MatInputModule,
     MatToolbarModule,
     MatSlideToggleModule,
+    MatSnackBarModule,
     ReactiveFormsModule
   ],
   providers: [],

@@ -27,3 +27,24 @@ body {
   display: flex;
   justify-self: center;
 }
+
+.error-snackbar {
+  div {
+    background-color: $error-color !important;
+    border-radius: 1rem;
+
+    span {
+      color: $white-color;
+    }
+  }
+}
+.success-snackbar {
+  div {
+    background-color: $accent-color !important;
+    border-radius: 1rem;
+
+    span {
+      color: $white-color;
+    }
+  }
+}
