@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -57,6 +58,7 @@ import { SignupComponent } from './views/auth/signup/signup.component';
     MatInputModule,
     MatNativeDateModule,
     MatToolbarModule,
+    MatSelectModule,
     MatSlideToggleModule,
     MatSnackBarModule,
     ReactiveFormsModule,
