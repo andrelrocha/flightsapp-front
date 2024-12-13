@@ -21,6 +21,21 @@
     </mat-form-field>
 
     <mat-form-field class="custom-input">
+      <mat-label>Crie um username</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="usernameFormControl"
+        [errorStateMatcher]="matcher"
+        placeholder="Digite um username"
+      />
+      <mat-hint>Digite um username</mat-hint>
+      <mat-error *ngIf="usernameFormControl.hasError('required')">
+        Username é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="custom-input">
       <mat-label>Digite seu nome</mat-label>
       <input
         type="text"
@@ -65,6 +80,27 @@
       <mat-hint>Digite seu CPF</mat-hint>
       <mat-error *ngIf="cpfFormControl.hasError('required')">
         CPF é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="custom-input">
+      <mat-label>Data de Nascimento</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [formControl]="birthDateFormControl"
+        placeholder="Escolha sua data de nascimento"
+        readonly />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="birthDateFormControl.hasError('required')">
+        Data de nascimento é <strong>obrigatória</strong>
+      </mat-error>
+      <mat-error *ngIf="birthDateFormControl.hasError('matDatepickerParse')">
+        Data inválida. Por favor, insira uma data válida.
+      </mat-error>
+      <mat-error *ngIf="birthDateFormControl.hasError('minAge')">
+        Você deve ter no mínimo 18 anos para se cadastrar
       </mat-error>
     </mat-form-field>
 

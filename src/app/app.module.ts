@@ -5,11 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
@@ -47,8 +50,10 @@ import { SignupComponent } from './views/auth/signup/signup.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
+    MatDatepickerModule,
     MatIconModule,
     MatInputModule,
+    MatNativeDateModule,
     MatToolbarModule,
     MatSlideToggleModule,
     MatSnackBarModule,
