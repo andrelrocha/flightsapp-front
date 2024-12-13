@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { format } from 'date-fns';
 
-import { AppErrorStateMatcher, CpfFormControl, EmailFormControl, PasswordFormControl, StringFormControl } from 'src/app/utils/formControl';
-import { BrPhoneFormControl } from 'src/app/utils/formControl/brazilian-phone';
-import { DateFormControl } from 'src/app/utils/formControl/date';
+import { AppErrorStateMatcher, BooleanFormControl, BrPhoneFormControl, CpfFormControl, DateFormControl, EmailFormControl,
+  PasswordFormControl, StringFormControl
+} from 'src/app/utils/formControl';
 
 @Component({
   selector: 'app-signup',
@@ -27,8 +27,16 @@ export class SignupComponent {
     minAge: 18
   })
   passwordFormControl = new PasswordFormControl(true);
+  refreshTokenControl = new BooleanFormControl();
+  themeControl = new BooleanFormControl();
 
   matcher = new AppErrorStateMatcher();
+
+  isDarkTheme = false;
+  toggleDarkTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    document.body.classList.toggle('dark-theme');
+  }
 
   isPasswordVisible = false;
   togglePasswordVisibility() {
@@ -49,6 +57,8 @@ export class SignupComponent {
       phone: this.brazilianPhoneFormControl.value,
       birthday: formattedDate,
       password: this.passwordFormControl.value,
+      refreshTokenEnabled: this.refreshTokenControl.value,
+      theme: this.themeControl.value ? 'DARK' : 'LIGHT'
     };
 
     console.log(form);

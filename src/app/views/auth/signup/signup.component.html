@@ -91,6 +91,7 @@
         [formControl]="birthDateFormControl"
         placeholder="Escolha sua data de nascimento"
         readonly />
+      <mat-hint>Selecione sua data de nascimento</mat-hint>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
       <mat-error *ngIf="birthDateFormControl.hasError('required')">
@@ -134,6 +135,20 @@
         <mat-icon>{{ isPasswordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
       </button>
     </mat-form-field>
+
+    <div class="checkbox-container">
+      <mat-checkbox color="primary" [formControl]="refreshTokenControl">
+        <span>Manter conectado</span>
+      </mat-checkbox>
+
+      <mat-slide-toggle (change)="toggleDarkTheme()" [formControl]="themeControl">
+        <div class="toggle-content">
+          <mat-icon *ngIf="isDarkTheme">dark_mode</mat-icon>
+          <mat-icon *ngIf="!isDarkTheme" class="light-mode-icon">light_mode</mat-icon>
+          <span>Escolha o tema</span>
+        </div>
+      </mat-slide-toggle>
+    </div>
 
 
     <button

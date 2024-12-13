@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -50,6 +51,7 @@ import { SignupComponent } from './views/auth/signup/signup.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
+    MatCheckboxModule,
     MatDatepickerModule,
     MatIconModule,
     MatInputModule,
