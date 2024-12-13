@@ -2,21 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments';
-import { CountriesDTO, CountriesPageDTO } from 'src/app/dtos/countriesDTO';
+import { SignUpReturnDTO } from 'src/app/dtos/signUpReturnDTO';
+import { SignUpDTO } from 'src/app/dtos/signUpDTO';
 
 @Injectable({
   providedIn: 'root',
 })
-export class GetAllCountriesUseCase {
+export class SignUpUseCase {
   constructor(private http: HttpClient) {}
 
-  async getCountriesData(): Promise<CountriesDTO[]> {
+  async signUp(data: SignUpDTO): Promise<SignUpReturnDTO> {
     try {
       const response = await firstValueFrom(
-        this.http.get<CountriesPageDTO>(`${environment.apiUrl}countries/all`)
+        this.http.post<SignUpReturnDTO>(`${environment.apiUrl}auth/signup`, data)
       );
 
-      return response.content;
+      return response;
     } catch (error) {
       if (error instanceof HttpErrorResponse) {
         if (error.status === 0) {

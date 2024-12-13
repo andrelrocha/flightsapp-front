@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { format } from 'date-fns';
 
 import { AppErrorStateMatcher, BooleanFormControl, BrPhoneFormControl, CpfFormControl, DateFormControl, EmailFormControl,
   PasswordFormControl, StringFormControl
 } from 'src/app/utils/formControl';
+import { SignUpUseCase } from 'src/app/api/auth/signup';
 
 import { GetAllCountriesUseCase } from 'src/app/api/countries/getAllCountries';
 import { ShowAlertService } from 'src/app/service/notification/showAlert';
 import { CountriesDTO } from 'src/app/dtos/countriesDTO';
-import { FormControl } from '@angular/forms';
+import { SignUpDTO } from 'src/app/dtos/signUpDTO';
 
 @Component({
   selector: 'app-signup',
@@ -31,6 +34,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private getAllCountriesUseCase: GetAllCountriesUseCase,
     private alertService: ShowAlertService,
+    private signUpUseCase: SignUpUseCase,
+    private router: Router
   ) {}
 
   emailFormControl = new EmailFormControl();
@@ -73,21 +78,25 @@ export class SignupComponent implements OnInit {
         ? format(birthDate, 'yyyy-MM-dd')
         : null;
 
-        const form = {
+        const data = new SignUpDTO({
           login: this.emailFormControl.value,
           name: this.nameFormControl.value,
           username: this.usernameFormControl.value,
-          country: this.countryFormControl.value,
+          countryId: this.countryFormControl.value,
           socialNumber: this.cpfFormControl.value,
           phone: this.brazilianPhoneFormControl.value,
           birthday: formattedDate,
           password: this.passwordFormControl.value,
           refreshTokenEnabled: this.refreshTokenControl.value,
-          theme: this.themeControl.value ? 'DARK' : 'LIGHT'
-        };
+          theme: this.themeControl.value ? 'DARK' : 'LIGHT',
+          twoFactorEnabled: false
+        });
 
-        console.log(form);
-        console.log('Formulário enviado');
+        const apiResponse = await this.signUpUseCase.signUp(data);
+
+        this.alertService.showAlert(`${apiResponse.name} cadastrado com sucesso!`, 'success');
+
+        this.router.navigate(['/signin']);
       } catch (error) {
         this.alertService.showAlert(String(error), 'error');
       }

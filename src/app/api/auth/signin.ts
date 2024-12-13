@@ -22,9 +22,9 @@ export class SignInUseCase {
         if (error.status === 0) {
           throw new Error('Não foi possível conectar ao servidor. Verifique sua conexão.');
         } else if (error.status >= 400 && error.status < 500) {
-          throw new Error('Credenciais inválidas. Por favor, verifique seu e-mail e senha.');
+          throw new Error(`${error.status}: ${error.error}`);
         } else if (error.status >= 500) {
-          throw new Error('Ocorreu um erro no servidor. Tente novamente mais tarde.');
+          throw new Error(`${error.status}: Ocorreu um erro no servidor. Tente novamente mais tarde.`);
         }
       }
       throw new Error('Erro desconhecido. Tente novamente.');

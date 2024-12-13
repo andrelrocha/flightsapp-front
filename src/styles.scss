@@ -26,6 +26,10 @@ body {
   span {
     color: $white-color !important;
   }
+
+  .mat-mdc-snack-bar-container .mdc-snackbar__label {
+    color: $white-color !important;
+  }
 }
 
 .mobile {
