@@ -20,7 +20,7 @@ body {
 .dark-theme {
   @include angular-material-theme($dark-theme);
 
-  background-color: $grey-color;
+  background-color: $gray-color;
   color: $white-color;
 
   span {

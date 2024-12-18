@@ -7,7 +7,7 @@
   margin: 0;
 
   &.dark-mode {
-    background-color: $grey-color;
+    background-color: $gray-color;
   }
 
   .banner {
@@ -34,7 +34,7 @@
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
-      $grey-color 90%
+      $gray-color 90%
     );
   }
 }

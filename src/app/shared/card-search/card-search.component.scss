@@ -2,7 +2,7 @@
 
 .card-search {
   max-width: 320px;
-  background-color: $white-color;
+  background-color: $darken-white-color;
   border-radius: 0.8rem;
 
   button {
@@ -21,5 +21,9 @@
       color: $primary-color;
       text-align: center;
     }
+  }
+
+  .mat-mdc-card-content:last-child {
+    padding-bottom: 0;
   }
 }

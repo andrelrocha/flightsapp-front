@@ -1,0 +1,20 @@
+.content-container {
+  padding: 2rem 0;
+
+  .search-title {
+    font-style: bold;
+    font-weight: 700;
+  }
+
+  .cards-search-container, .cards-review-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+}

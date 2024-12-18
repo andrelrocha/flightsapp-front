@@ -12,8 +12,8 @@ $light-theme: mat-light-theme((
   )
 ));
 
-$dark-app-primary: mat-palette($mat-grey, 700);
-$dark-app-accent: mat-palette($mat-blue-grey, 400);
+$dark-app-primary: mat-palette($mat-gray, 700);
+$dark-app-accent: mat-palette($mat-blue-gray, 400);
 $dark-app-warning: mat-palette($mat-red);
 
 $dark-theme: mat-dark-theme((

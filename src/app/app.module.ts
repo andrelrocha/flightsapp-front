@@ -33,6 +33,7 @@ import { SigninComponent } from './views/auth/signin/signin.component';
 import { SignupComponent } from './views/auth/signup/signup.component';
 import { CardSearchComponent } from './shared/card-search/card-search.component';
 import { HomeLoggedComponent } from './views/logged/home-logged/home-logged.component';
+import { CardReviewComponent } from './shared/card-review/card-review.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { HomeLoggedComponent } from './views/logged/home-logged/home-logged.comp
     SignupComponent,
     CardSearchComponent,
     HomeLoggedComponent,
+    CardReviewComponent,
   ],
   imports: [
     BrowserModule,
