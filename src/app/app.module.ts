@@ -5,8 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -34,6 +36,7 @@ import { SignupComponent } from './views/auth/signup/signup.component';
 import { CardSearchComponent } from './shared/card-search/card-search.component';
 import { HomeLoggedComponent } from './views/logged/home-logged/home-logged.component';
 import { CardReviewComponent } from './shared/card-review/card-review.component';
+import { SearchFormComponent } from './shared/search-form/search-form.component';
 
 
 @NgModule({
@@ -52,6 +55,7 @@ import { CardReviewComponent } from './shared/card-review/card-review.component'
     CardSearchComponent,
     HomeLoggedComponent,
     CardReviewComponent,
+    SearchFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +63,10 @@ import { CardReviewComponent } from './shared/card-review/card-review.component'
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatCardModule,
     MatCheckboxModule,
+    MatChipsModule,
     MatDatepickerModule,
     MatIconModule,
     MatInputModule,
