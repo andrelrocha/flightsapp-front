@@ -1,0 +1,71 @@
+@import 'src/styles/colors.scss';
+
+.modal {
+  border: 1px solid $gray-color;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .mat-mdc-dialog-container .mdc-dialog__content {
+    color: $primary-color !important;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: $primary-color;
+  }
+
+  .age-selection {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      list-style-type: none;
+      margin: 0 0 0 -1em;
+      padding: 0;
+
+      .age-selection-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      li {
+        margin-bottom: 0.6rem;
+        margin: 0.8rem;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: start;
+        padding: 0;
+        color: $primary-color;
+
+        button {
+          background-color: transparent;
+          border: none;
+        }
+
+        span {
+          vertical-align: middle;
+          padding: 0 0.8rem;
+        }
+      }
+    }
+  }
+
+  .selecao-categoria {
+    margin-top: 32px;
+    color: #1D1B20;
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+      margin: 0 8px;
+      color: $primary-color;
+    }
+  }
+}

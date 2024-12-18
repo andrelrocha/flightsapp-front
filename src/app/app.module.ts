@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -37,6 +38,7 @@ import { CardSearchComponent } from './shared/card-search/card-search.component'
 import { HomeLoggedComponent } from './views/logged/home-logged/home-logged.component';
 import { CardReviewComponent } from './shared/card-review/card-review.component';
 import { SearchFormComponent } from './shared/search-form/search-form.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 
 @NgModule({
@@ -56,6 +58,7 @@ import { SearchFormComponent } from './shared/search-form/search-form.component'
     HomeLoggedComponent,
     CardReviewComponent,
     SearchFormComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { SearchFormComponent } from './shared/search-form/search-form.component'
     MatCheckboxModule,
     MatChipsModule,
     MatDatepickerModule,
+    MatDialogModule,
     MatIconModule,
     MatInputModule,
     MatNativeDateModule,

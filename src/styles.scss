@@ -23,6 +23,10 @@ body {
   background-color: $gray-color;
   color: $white-color;
 
+  h1 {
+    color: $white-color !important;
+  }
+
   span {
     color: $white-color !important;
   }
@@ -33,6 +37,10 @@ body {
 
   .card {
     background-color: $mid-gray-color !important;
+  }
+
+  li {
+    color: $white-color !important;
   }
 
   .mat-button-toggle {
