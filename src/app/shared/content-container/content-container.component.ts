@@ -11,6 +11,6 @@ export class ContentContainerComponent implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.renderer.addClass(this.el.nativeElement, 'animate');
-    }, 100);
+    }, 200);
   }
 }

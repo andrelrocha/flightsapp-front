@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
@@ -30,6 +31,8 @@ import { HomeComponent } from './views/home/home.component';
 import { SliderComponent } from './shared/slider/slider.component';
 import { SigninComponent } from './views/auth/signin/signin.component';
 import { SignupComponent } from './views/auth/signup/signup.component';
+import { CardSearchComponent } from './shared/card-search/card-search.component';
+import { HomeLoggedComponent } from './views/logged/home-logged/home-logged.component';
 
 
 @NgModule({
@@ -45,6 +48,8 @@ import { SignupComponent } from './views/auth/signup/signup.component';
     SliderComponent,
     SigninComponent,
     SignupComponent,
+    CardSearchComponent,
+    HomeLoggedComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,7 @@ import { SignupComponent } from './views/auth/signup/signup.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
+    MatCardModule,
     MatCheckboxModule,
     MatDatepickerModule,
     MatIconModule,
